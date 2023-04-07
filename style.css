@@ -52,7 +52,7 @@
         
         .info div:before {
             content: '';
-            background-color: #292c38;
+            background-color: lightblue;
             height: 100%;
             left: -50%;
             top: 0;
