@@ -1,86 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Template</title>
+<html>
+<head>
+    <title>Fancy CV Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-      /* Add your own styles here */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-      }
-      h1 {
-        margin: 0;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      .section-heading {
-        margin-top: 30px;
-        margin-bottom: 10px;
-      }
-      .education,
-      .experience {
-        margin-bottom: 30px;
-      }
-      .education h2,
-      .experience h2 {
-        margin-bottom: 5px;
-      }
+        body {
+            background-color: #fafafa;
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #292c38;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        
+        .info div {
+            margin: 10px;
+            max-width: 300px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform .3s ease-in-out;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .info div:hover {
+            transform: translateY(-10px);
+        }
+        
+        .info div:before {
+            content: '';
+            background-color: #292c38;
+            height: 100%;
+            left: -50%;
+            top: 0;
+            position: absolute;
+            transform: skewX(-45deg);
+            width: 200%;
+            z-index: -1;
+        }
+        
+        .info h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #292c38;
+            text-transform: uppercase;
+            position: relative;
+            padding-top: 10px;
+            line-height: 1;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        
+        .info p {
+            margin-bottom: 0;
+            color: #666;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #292c38;
+            color: #fff;
+        }
+
+        .skills h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .skills ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        .skills li {
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .skills li:before {
+            content: '';
+            background-color: #292c38;
+            height: 100%;
+            left: -50%;
+            top: 0;
+            position: absolute;
+            transform: skewX(-45deg);
+            width: 200%;
+            z-index: -1;
+        }
+
+        .skills li h3 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #292c38;
+            text-transform: uppercase;
+            position: relative;
+            padding-top: 10px;
+            line-height: 1;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        .skills li p {
+            margin-bottom: 0;
+            color: #666;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        
     </style>
-  </head>
-  <body>
+    
+</head>
+<body>
+
     <header>
-      <h1>John Doe</h1>
-      <p>Web Developer</p>
+        <h1>John Doe</h1>
+        <p>Web Developer</p>
     </header>
-    <div class="container">
-      <section class="education">
-        <h2>Education</h2>
-        <ul>
-          <li>Bachelor of Science in Computer Science, XYZ University (2016-2020)</li>
-          <li>Online Web Development Course, Udemy (2019)</li>
-        </ul>
-      </section>
-      <section class="experience">
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <h3>Web Developer, ABC Company (2020 - Present)</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <h3>Intern, XYZ Agency (2019)</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </li>
-        </ul>
-      </section>
-      <section class="skills">
+
+    <div class="info">
+        <div>
+            <h2>Personal Info</h2>
+            <p>Name: John Doe</p>
+            <p>Email: john@doe.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Main Street</p>
+        </div>
+        <div>
+            <h2>Work Experience</h2>
+            <p>Web Developer, ABC Company</p>
+            <p>Jan 2018 - Present</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.</p>
+        </div>
+        <div>
+            <h2>Education</h2>
+            <p>Bachelor of Science in Computer Science, XYZ University</p>
+            <p>Aug 2014 - Dec 2017</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.</p>
+        </div>
+    </div>
+
+    <div class="skills">
         <h2>Skills</h2>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
+            <li>
+                <h3>HTML</h3>
+                <p>Advanced</p>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <p>Advanced</p>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+            </li>
+            <li>
+                <h3>PHP</h3>
+                <p>Intermediate</p>
+            </li>
+            <li>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+            </li>
+            <li>
+                <h3>Photoshop</h3>
+                <p>Advanced</p>
+            </li>
+            <li>
+                <h3>Illustrator</h3>
+                <p>Advanced</p>
+            </li>
+            <li>
+                <h3>InDesign</h3>
+                <p>Intermediate</p>
+            </li>
         </ul>
-      </section>
     </div>
-  </body>
+
+</body>
 </html>
